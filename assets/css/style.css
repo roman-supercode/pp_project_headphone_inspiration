@@ -1,0 +1,297 @@
+/* Font: Work sans
+Farben: #2e2e2e / #867772 / rgb(234, 204, 194) / #ebccc2 / #fff / rgb(115, 115, 115)  */
+
+
+/* ================
+    General Style
+================= */
+@font-face {
+    font-family: WorkSans;
+    src: url("../fonts/WorkSans-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(115, 115, 115);
+    font-family: WorkSans;
+}
+
+html {
+    font-size: 10px;
+    max-width: 1920px;
+    background-color: #2e2e2e;
+}
+
+.hidescroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ================
+    Header Style
+================= */
+.index_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+    color: #867772;
+
+    /* fixed navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.headernav a {
+    text-decoration: none;
+    padding: 0 0.3rem;
+}
+
+.headernav a:nth-of-type(1),
+.headernav a:nth-of-type(5) {
+    padding: 0 5rem;
+}
+
+.headernav a:hover {
+    transition-duration: 2s;
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ================
+    Main Style
+================= */
+
+/* START fixed left-nav */
+.mainnav {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    width: 30%;
+    top: 19rem;
+    left: 0rem;
+
+}
+
+.mainnav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mainnav ul li {
+    margin: 4rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+.mainnav ul li a {
+    position: relative;
+    text-decoration: none;
+    padding-left: 6rem;
+    color: #867772;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+/* Kreise neben jedem A-Element */
+.mainnav ul li a::before {
+    content: '';
+    position: absolute;
+    border: 1px solid rgb(115, 115, 115);
+    border-radius: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 1.5rem;
+    top: 0;
+}
+
+.active::before {
+    /* content: '';
+    position: absolute;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    left: 1.5rem;
+    top: 0; */
+    /* Outline = Linie außerhalb des Borders eines Elements */
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+.mainnav a:hover {
+    color: #ebccc2;
+}
+
+/* 4 Striche unter den Kreisen */
+.pipe::before {
+    content: "";
+    position: absolute;
+    border-left: 1px solid rgb(115, 115, 115);
+    width: 1rem;
+    height: 5rem;
+    top: 2.4rem;
+    left: 2.3rem;
+}
+
+/* END fixed left-nav */
+
+
+.index_main {
+    padding: 1rem 6rem;
+}
+
+.index_main img {
+    width: 100%;
+}
+
+.index_main h1 {
+    width: 40%;
+    font-size: 4rem;
+    margin: 15rem auto;
+    color: #ebccc2;
+}
+
+.index_main section {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin: 15rem auto;
+    gap: 6rem;
+}
+
+.index_main section img {
+    width: 40%;
+}
+
+.div_index {
+    font-size: 1.5rem;
+}
+
+.div_index h2 {
+    color: #ebccc2;
+    font-size: 4rem;
+    padding: 2rem 0;
+}
+
+
+
+/* ==========================
+Lounger & Experience Style
+=========================== */
+.lounger_experience {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.lounger_experience img {
+    width: 60%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.div_loun_ex {
+    padding-right: 8rem;
+    font-size: 1.5rem;
+}
+
+.div_loun_ex h2 {
+    color: #ebccc2;
+    font-size: 3rem;
+    padding-bottom: 10rem;
+}
+
+/* ==========================
+    Inspiration Style
+=========================== */
+.main_inspiration {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+video {
+    width: 100%;
+    height: 70vh;
+    margin: 13vh 0;
+}
+
+.main_inspiration div h3 {
+    font-size: 2rem;
+    color: #ebccc2;
+    font-weight: lighter;
+}
+
+.main_inspiration div h1 {
+    font-size: 4rem;
+    color: #ebccc2;
+    padding: 2rem 0 3rem 0;
+}
+
+.main_inspiration div p {
+    font-size: 1.6rem;
+    margin: 3rem 0;
+}
+
+.main_inspiration div span {
+    border: 1px solid #ebccc2;
+    ;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.main_inspiration section {
+    margin-top: 10rem;
+}
+
+.main_inspiration section article {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.main_inspiration section article img {
+    width: 50%;
+}
+
+/* ==========================
+    Shop Style
+=========================== */
+
+.lounger_experience div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lounger_experience div img {
+    width: 100%;
+    height: 65vh;
+}
+
+.lounger_experience div h1 {
+    font-size: 4rem;
+    color: #ebccc2;
+}
+
+.lounger_experience div p {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.lounger_experience div a {
+    font-size: 1.6rem;
+    background-color: #ebccc2;
+    padding: 1rem 3rem;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
